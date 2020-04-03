@@ -109,8 +109,8 @@ class index extends Component {
     render() {
         return (
             <div>
-                Home
-                <div id="charts"></div>
+                <div className="text222">ho,e</div>
+                <div  id="charts"></div>
                 <Button>ff3333ff</Button>
                 {moment().format('MMMM Do YYYY, h:mm:ss a')}
                 <Table dataSource={dataSource} columns={columns} />;
