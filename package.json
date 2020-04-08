@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --config build/webpack.dev.js",
-    "build": "webpack --config build/webpack.prod.js"
+    "dev": "webpack-dev-server --config build/webpack.dev.js --progress --profile",
+    "build": "webpack --config build/webpack.prod.js  --progress"
   },
   "repository": {
     "type": "git",
@@ -47,6 +47,8 @@
   },
   "dependencies": {
     "antd": "^3.26.14",
+    "axios": "^0.19.2",
+    "babel-polyfill": "^6.26.0",
     "echarts": "^4.7.0",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",

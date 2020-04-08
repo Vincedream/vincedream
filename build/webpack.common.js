@@ -35,6 +35,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.join(srcPath, 'index.html'),
             filename: 'index.html'
-        })
-    ]
+        }),
+    ],
 }

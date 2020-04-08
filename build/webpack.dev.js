@@ -6,6 +6,7 @@ const { srcPath, distPath } = require('./paths')
 
 module.exports = smart(commonConf, {
     mode: 'development',
+    devtool: 'cheap-module-eval-source-map',
     module: {
         rules: [
             
