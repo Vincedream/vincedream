@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment'
-import echarts from 'echarts'
 import { isEqual } from 'lodash'
-import { Link } from 'react-router-dom'
 import {
   Form,
   Select,
@@ -22,7 +20,11 @@ import {
   Table,
   Divider
 } from 'antd';
+import Banner1 from './components/Banner1'
+import Banner2 from './components/Banner2'
+import Banner3 from './components/Banner3'
 import "./index.scss";
+
 
 const { Option } = Select;
 
@@ -181,8 +183,6 @@ class index extends Component {
     }
   }
   componentDidMount() {
-    // console.log(anx)
-    this.initCharts()
     console.log(isEqual('222', '333'))
   }
   handexx = () => {
@@ -361,12 +361,12 @@ class index extends Component {
     console.log({ ...a });
   }
   func25 = () => {
-    const a = { name: '7788', age: 12 };
+    const a = { name: '77388', age: 12 };
     console.log({ ...a });
   }
   
   func27 = () => {
-    const a = { name: '7788', age: 12 };
+    const a = { name: '77388', age: 12 };
     console.log({ ...a });
   }
   func28 = () => {
@@ -417,26 +417,6 @@ class index extends Component {
     const a = { name: '7788', age: 12 };
     console.log({ ...a });
   }
-  initCharts() {
-    // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById('charts'));
-    // 绘制图表
-    myChart.setOption({
-      title: {
-        text: 'ECharts 入门示例'
-      },
-      tooltip: {},
-      xAxis: {
-        data: ['衬3衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
-      },
-      yAxis: {},
-      series: [{
-        name: '销量',
-        type: 'bar',
-        data: [5, 20, 36, 10, 10, 20]
-      }]
-    });
-  }
   render() {
     const { getFieldDecorator } = this.props.form;
     const formItemLayout = {
@@ -447,11 +427,10 @@ class index extends Component {
     const { targetKeys } = this.state;
     return (
       <div>
-        <Link to="page23">page32</Link>
-        <Link to="page2">page2</Link>
-        <Link to="page14">page14</Link>
-        <Link to="page17">page17</Link>
-        <Link to="page29">page29</Link>
+        <h1>this is home page</h1>
+        <Banner1 />
+        <Banner2 />
+        <Banner3 />
         <div className="text222">ho,e2</div>
         <div id="charts"></div>
         <TreeTransfer dataSource={treeData} targetKeys={targetKeys} onChange={this.onChange} />
@@ -563,7 +542,6 @@ class index extends Component {
             initialValue: 3.5,
           })(<Rate />)}
         </Form.Item>
-
         <Form.Item label="Upload" extra="longgggggggggggggggggggggggggggggggggg">
           {getFieldDecorator('upload', {
             valuePropName: 'fileList',
@@ -571,7 +549,7 @@ class index extends Component {
           })(
             <Upload name="logo" action="/upload.do" listType="picture">
               <Button>
-                <Icon type="upload" /> Click2 tsssow upload
+                <Icon type="upload" /> Click2 tss3sow upload
               </Button>
             </Upload>,
           )}

@@ -1,7 +1,5 @@
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const TerserJSPlugin = require('terser-webpack-plugin')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const commonConf = require('./webpack.common');
@@ -37,8 +35,7 @@ module.exports = smart(commonConf, {
     ],
     optimization: {
         minimizer: [
-            new TerserJSPlugin({}),
-            new OptimizeCSSAssetsPlugin({})
+            
         ]
     }
 })

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import moment from 'moment'
-import echarts from 'echarts'
 import { isEqual } from 'lodash'
 import {
   Form,
@@ -21,7 +20,11 @@ import {
   Table,
   Divider
 } from 'antd';
+import Banner1 from './components/Banner1'
+import Banner2 from './components/Banner2'
+import Banner3 from './components/Banner3'
 import "./index.scss";
+
 
 const { Option } = Select;
 
@@ -40,7 +43,7 @@ const columns = [
     key: 'age',
   },
   {
-    title: 'Address',
+    title: 'Addres3s',
     dataIndex: 'address',
     key: 'address',
   },
@@ -180,27 +183,26 @@ class index extends Component {
     }
   }
   componentDidMount() {
-    this.initCharts()
     console.log(isEqual('222', '333'))
   }
   handexx = () => {
-    console.log('xxx')
+    console.log('xxjjjx')
   }
   onChange = targetKeys => {
-    console.log('Target Keys:', targetKeys);
+    console.log('Tasdfrget Keys:', targetKeys);
     this.setState({ targetKeys });
   }
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        console.log('Receisdfved values of form: ', values);
       }
     });
   };
 
   normFile = e => {
-    console.log('Upload event:', e);
+    console.log('Up3ldsfoad event:', e);
     if (Array.isArray(e)) {
       return e;
     }
@@ -283,7 +285,7 @@ class index extends Component {
     console.log({ ...a });
   }
   func6 = () => {
-    const a = { name: '7788', age: 12 };
+    const a = { name: '772288', age: 12 };
     console.log({ ...a });
   }
   func7 = () => {
@@ -339,15 +341,15 @@ class index extends Component {
     console.log({ ...a });
   }
   func20 = () => {
-    const a = { name: '7788', age: 12 };
+    const a = { name: '177838', age: 12 };
     console.log({ ...a });
   }
   func21 = () => {
-    const a = { name: '7788', age: 12 };
+    const a = { name: '77882', age: 12 };
     console.log({ ...a });
   }
   func22 = () => {
-    const a = { name: '7788', age: 12 };
+    const a = { name: '77288', age: 12 };
     console.log({ ...a });
   }
   func23 = () => {
@@ -359,15 +361,12 @@ class index extends Component {
     console.log({ ...a });
   }
   func25 = () => {
-    const a = { name: '7788', age: 12 };
+    const a = { name: '77388', age: 12 };
     console.log({ ...a });
   }
-  func26 = () => {
-    const a = { name: '7788', age: 12 };
-    console.log({ ...a });
-  }
+  
   func27 = () => {
-    const a = { name: '7788', age: 12 };
+    const a = { name: '77388', age: 12 };
     console.log({ ...a });
   }
   func28 = () => {
@@ -375,11 +374,11 @@ class index extends Component {
     console.log({ ...a });
   }
   func29 = () => {
-    const a = { name: '7788', age: 12 };
+    const a = { name: '7721188', age: 12 };
     console.log({ ...a });
   }
   func30 = () => {
-    const a = { name: '77848', age: 12 };
+    const a = { name: '7227848', age: 12 };
     console.log({ ...a });
   }
   func31 = () => {
@@ -418,26 +417,6 @@ class index extends Component {
     const a = { name: '7788', age: 12 };
     console.log({ ...a });
   }
-  initCharts() {
-    // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById('charts'));
-    // 绘制图表
-    myChart.setOption({
-      title: {
-        text: 'ECharts 入门示例'
-      },
-      tooltip: {},
-      xAxis: {
-        data: ['衬3衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
-      },
-      yAxis: {},
-      series: [{
-        name: '销量',
-        type: 'bar',
-        data: [5, 20, 36, 10, 10, 20]
-      }]
-    });
-  }
   render() {
     const { getFieldDecorator } = this.props.form;
     const formItemLayout = {
@@ -448,10 +427,15 @@ class index extends Component {
     const { targetKeys } = this.state;
     return (
       <div>
-        <div className="text222">ho,e</div>
+        <h1>this is page7</h1>
+        
+        <Banner1 />
+        <Banner2 />
+        <Banner3 />
+        <div className="text222">ho,e2</div>
         <div id="charts"></div>
         <TreeTransfer dataSource={treeData} targetKeys={targetKeys} onChange={this.onChange} />
-        <Button>ff3333ff</Button>
+        <Button>ff3333ff22</Button>
         {moment().format('MMMM Do YYYY, h:mm:ss a')}
         <Form {...formItemLayout} onSubmit={this.handleSubmit}>
         <Form.Item label="Plain Text">
@@ -475,10 +459,10 @@ class index extends Component {
             ],
           })(
             <Select mode="multiple" placeholder="Please select favourite colors">
-              <Option value="red">Red</Option>
-              <Option value="green">Green</Option>
+              <Option value="red">R222ed111</Option>
+              <Option value="green">Gr111een</Option>
               <Option value="blue">Blue</Option>
-            </Select>,
+            </Select>
           )}
         </Form.Item>
 
@@ -559,7 +543,6 @@ class index extends Component {
             initialValue: 3.5,
           })(<Rate />)}
         </Form.Item>
-
         <Form.Item label="Upload" extra="longgggggggggggggggggggggggggggggggggg">
           {getFieldDecorator('upload', {
             valuePropName: 'fileList',
@@ -567,7 +550,7 @@ class index extends Component {
           })(
             <Upload name="logo" action="/upload.do" listType="picture">
               <Button>
-                <Icon type="upload" /> Click to upload
+                <Icon type="upload" /> Click2 tss3sow upload
               </Button>
             </Upload>,
           )}
@@ -590,7 +573,7 @@ class index extends Component {
 
         <Form.Item wrapperCol={{ span: 12, offset: 6 }}>
           <Button type="primary" htmlType="submit">
-            Sub3mit2
+            Su2b326w2m34it2
           </Button>
         </Form.Item>
       </Form>
